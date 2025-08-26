@@ -1,0 +1,23 @@
+import moment from 'moment';
+
+export class Datas {
+    diferencaDias(data) {
+        return data.diff(this.dataAtual(), 'days');
+    }
+
+    adicionarDias(data, dias) {
+        return data.add(dias, 'days');
+    }
+
+    removerDias(data, dias) {
+        return data.subtract(dias, 'days');
+    }
+
+    formataData(data) {
+        return data.format("DD/MM/YYYY");
+    }
+
+    dataAtual() {
+        return moment();
+    }
+}
